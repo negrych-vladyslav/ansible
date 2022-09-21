@@ -1,0 +1,8 @@
+---
+- name: Install nginx
+  apt: name=nginx state=latest update_cache=yes
+
+- name: Delete default site
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent

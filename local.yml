@@ -1,0 +1,16 @@
+---
+- name: Install WordPress
+  hosts: localhost
+  connection: local
+  become: yes
+
+  vars:
+    - wpdirectory: "/var/www/html"
+    - download_url: "http://wordpress.org/latest.tar.gz"
+    - db_id: "mysqldb.cbvhjwlvuevz.eu-west-1.rds.amazonaws.com"   
+
+  roles:
+  - { role: nginx }
+  - { role: mysql }
+  - { role: php }
+  - { role: wordpress }

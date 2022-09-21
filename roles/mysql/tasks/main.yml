@@ -1,0 +1,5 @@
+---
+- name: Install mysql
+  apt: name={{ item }} state=latest update_cache=yes
+  loop: 
+    - mysql-client
