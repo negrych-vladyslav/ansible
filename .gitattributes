@@ -1,1 +1,0 @@
-wp-config.php.j2 filter=git-crypt diff=git-crypt
